@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden; 
+   
+}
+
+.myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;   
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.bg_countainer {
+    position: relative;
+}
+.bg_menu_bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+}
+img {
+    max-width: 250px;
+    max-height: 200px;
+    filter: brightness(500%);
+    filter: saturate(9);
+    color: white;
+}
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    z-index: 1;
+}
+.logo:hover{
+    transform: scale(1.2);
+   
+}
+.menubar {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    margin-right: 80px;
+    z-index: 1;
+    background-color: rgba(17, 87, 153, 0.4);
+ 
+    border-radius: 30px;
+    padding: 10px 10px;
+}
+.menubar ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menubar ul li a {
+    text-decoration: none;
+    color: rgb(19, 201, 201);
+   
+}
+.menubar ul li{
+    list-style: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 12px 16px;
+    margin-top: 0 10px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.menubar li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: 0.2s;
+    border-radius: 25px;
+}
+.menubar li:hover::before{
+    background: linear-gradient(to bottom,#e8e8e8,#d2d1d3);
+    box-shadow: 0 3px 20px 0 white;
+    transform: scale(1.1);}
